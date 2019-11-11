@@ -6,6 +6,10 @@ public class PlayerMove : MonoBehaviour
 {
     Vector3 currPos;
     public float speed;
+    public GameObject houseRoof;
+    public GameObject wallOne;
+    public GameObject wallTwo;
+    public GameObject wallThree;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,7 +36,28 @@ public class PlayerMove : MonoBehaviour
         {
             currPos.x += speed * Time.deltaTime;
         }
-
         transform.position = currPos;
+    }
+
+    void OnCollisionEnter(Collision other)
+    {
+        if(other.gameObject.name == "HouseFloor")
+        {
+            houseRoof.SetActive(false);
+            wallOne.SetActive(false);
+            wallTwo.SetActive(false);
+            wallThree.SetActive(false);
+        }
+    }
+
+    void OnCollisionExit(Collision other)
+    {
+        if (other.gameObject.name == "HouseFloor")
+        {
+            houseRoof.SetActive(true);
+            wallOne.SetActive(true);
+            wallTwo.SetActive(true);
+            wallThree.SetActive(true);
+        }
     }
 }
