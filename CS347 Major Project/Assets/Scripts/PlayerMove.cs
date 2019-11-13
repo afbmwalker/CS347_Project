@@ -10,10 +10,16 @@ public class PlayerMove : MonoBehaviour
     public GameObject wallOne;
     public GameObject wallTwo;
     public GameObject wallThree;
+    private Color roofColor, wall1Color, wall2Color, wall3Color;
+    private Color transparent;
     // Start is called before the first frame update
     void Start()
     {
-        
+        transparent = new Color(0.0f, 0.0f, 0.0f, 0.0f);
+        roofColor = houseRoof.GetComponent<Renderer>().material.color;
+        wall1Color = wallOne.GetComponent<Renderer>().material.color;
+        wall2Color = wallTwo.GetComponent<Renderer>().material.color;
+        wall3Color = wallThree.GetComponent<Renderer>().material.color;
     }
 
     // Update is called once per frame
@@ -43,10 +49,10 @@ public class PlayerMove : MonoBehaviour
     {
         if(other.gameObject.name == "HouseFloor")
         {
-            houseRoof.SetActive(false);
-            wallOne.SetActive(false);
-            wallTwo.SetActive(false);
-            wallThree.SetActive(false);
+            houseRoof.GetComponent<Renderer>().material.color = transparent;
+            wallOne.GetComponent<Renderer>().material.color = transparent;
+            wallTwo.GetComponent<Renderer>().material.color = transparent;
+            wallThree.GetComponent<Renderer>().material.color = transparent;
         }
     }
 
@@ -54,10 +60,10 @@ public class PlayerMove : MonoBehaviour
     {
         if (other.gameObject.name == "HouseFloor")
         {
-            houseRoof.SetActive(true);
-            wallOne.SetActive(true);
-            wallTwo.SetActive(true);
-            wallThree.SetActive(true);
+            houseRoof.GetComponent<Renderer>().material.color = roofColor;
+            wallOne.GetComponent<Renderer>().material.color = wall1Color;
+            wallTwo.GetComponent<Renderer>().material.color = wall2Color;
+            wallThree.GetComponent<Renderer>().material.color = wall3Color;
         }
     }
 }
