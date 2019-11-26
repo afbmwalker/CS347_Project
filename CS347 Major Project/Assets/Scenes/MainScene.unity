@@ -16092,6 +16092,28 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 760764933}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &773148246 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9193000327728686335, guid: 17667941ef5e15a439379f3194e510e8,
+    type: 3}
+  m_PrefabInstance: {fileID: 1147157620}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &773148247
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 773148246}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &773992549
 GameObject:
   m_ObjectHideFlags: 0
@@ -17083,6 +17105,28 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 833273165}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &842654198 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1280073967335576869, guid: 0e76c5c12fcafdc41be26250f115fb1e,
+    type: 3}
+  m_PrefabInstance: {fileID: 480743300}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &842654199
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 842654198}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &843544402
 GameObject:
   m_ObjectHideFlags: 0
@@ -29541,6 +29585,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1361547078}
+  - component: {fileID: 1361547079}
   m_Layer: 0
   m_Name: Weapons
   m_TagString: Untagged
@@ -29565,6 +29610,21 @@ Transform:
   m_Father: {fileID: 1138283869}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1361547079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1361547077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1376a9712e9d1e243bc82d233dd6c67d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  axe: {fileID: 1648642181}
+  gun: {fileID: 842654198}
+  sling: {fileID: 773148246}
 --- !u!1 &1367679893
 GameObject:
   m_ObjectHideFlags: 0
@@ -35245,6 +35305,28 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1646869365}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1648642181 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2308563917586728107, guid: a15184c8ceff23042839fee0a0dcb8f7,
+    type: 3}
+  m_PrefabInstance: {fileID: 1140724393}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &1648642182
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1648642181}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1649117204
 GameObject:
   m_ObjectHideFlags: 0
