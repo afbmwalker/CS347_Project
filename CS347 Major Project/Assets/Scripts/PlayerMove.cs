@@ -3,15 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
-{
-    Vector3 currPos;
+{  // Moving Variables
     public float speed;
+    // Make house objects transparent for better visual
     public GameObject houseRoof;
     public GameObject wallOne;
     public GameObject wallTwo;
     public GameObject wallThree;
     private Color roofColor, wall1Color, wall2Color, wall3Color;
     private Color transparent;
+    // Follow the Mouse, rotate
+    public float horizontalSpeed = 2.0f;
+    public float verticalSpeed = 2.0f;
+    private float yaw = 0.0f;
+    private float pitch = 0.0f;
+    public GameObject camera;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,25 +30,31 @@ public class PlayerMove : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        currPos = transform.position;
+    {   // Move Forward
         if (Input.GetKey("w") || Input.GetKey("up"))
         {
-            currPos.z += speed * Time.deltaTime;
+            transform.position = transform.position + Camera.main.transform.forward * speed * Time.deltaTime;
         }
+        // Move Backward
         if (Input.GetKey("s") || Input.GetKey("down"))
         {
-            currPos.z -= speed * Time.deltaTime;
+            transform.position = transform.position + Camera.main.transform.forward * -1 * speed * Time.deltaTime;
         }
+        // Move Left
         if (Input.GetKey("a") || Input.GetKey("left"))
         {
-            currPos.x -= speed * Time.deltaTime;
+            transform.position = transform.position + Camera.main.transform.right * -1 * speed * Time.deltaTime;
         }
+        // Move Right
         if (Input.GetKey("d") || Input.GetKey("right"))
         {
-            currPos.x += speed * Time.deltaTime;
+            transform.position = transform.position + Camera.main.transform.right * speed * Time.deltaTime;
         }
-        transform.position = currPos;
+        // update camera rotation according to mouse movement
+        yaw += horizontalSpeed * Input.GetAxis("Mouse X"); // rotation about x-axis
+        pitch -= verticalSpeed * Input.GetAxis("Mouse Y"); // rotation about y-axis
+        transform.eulerAngles = new Vector3(0.0f, yaw, 0.0f); // fixed z-axis
+        camera.transform.eulerAngles = new Vector3(pitch, yaw, 0.0f); // fixed z-axis
     }
 
     void OnCollisionEnter(Collision other)
