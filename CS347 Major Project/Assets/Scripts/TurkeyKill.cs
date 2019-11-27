@@ -12,7 +12,8 @@ public class TurkeyKill : MonoBehaviour
     {
         GameObject collidedObj = collision.gameObject;
         if (collidedObj.tag == "Weapon")
-        {
+        {   // Test
+            print("Turkey Hit!");
             health--;
             if (health==0)
             {
