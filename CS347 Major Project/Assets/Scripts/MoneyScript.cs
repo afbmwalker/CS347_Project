@@ -42,5 +42,15 @@ public class MoneyScript : MonoBehaviour
 			my_money.text = "";
 			amount = my_money.text;
 		}
+
+        //Replace this code after picking up weapons has been finalized.
+		if (collidedobject.gameObject.tag == "Weapon")
+		{
+			GameObject dollars;
+			dollars = GameObject.Find("MyMoney");
+			my_money = dollars.GetComponent<Text>();
+			my_money.text = "$5";
+			amount = my_money.text;
+		}
 	}
 }
