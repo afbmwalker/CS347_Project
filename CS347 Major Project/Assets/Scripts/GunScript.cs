@@ -29,7 +29,8 @@ public class GunScript : MonoBehaviour
     void Shoot()
     {
         GameObject bullets = Instantiate(bullet); // all GUI input for game object and instantiate in game
-        bullets.transform.position = bulletSpawn.transform.position; // move object to blimp location
+        bullets.transform.position = bulletSpawn.transform.position; // projectile starting location
+        Destroy(bullets, 5);
     }
 
     // Delay the attack

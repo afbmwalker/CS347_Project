@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BulletScript : MonoBehaviour
 {
-    private float bulletSpeed = 10.0f;
+    private float bulletSpeed = 20.0f;
     private Vector3 bulletPath;
     private GameObject bulletDrop;
 
