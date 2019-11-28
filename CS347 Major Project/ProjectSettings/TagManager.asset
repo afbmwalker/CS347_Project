@@ -8,6 +8,8 @@ TagManager:
   - Weapon
   - Turkey
   - BulletEnd
+  - Store
+  - Sidewalk
   layers:
   - Default
   - TransparentFX
