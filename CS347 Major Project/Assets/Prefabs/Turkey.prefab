@@ -628,9 +628,12 @@ GameObject:
   - component: {fileID: 8895909088609933958}
   - component: {fileID: 8895909088609933963}
   - component: {fileID: 3124638244393942038}
+  - component: {fileID: 348009806}
+  - component: {fileID: 348009805}
+  - component: {fileID: 7078186305860378039}
   m_Layer: 0
   m_Name: Turkey
-  m_TagString: Untagged
+  m_TagString: Turkey
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -691,7 +694,7 @@ MonoBehaviour:
   curveConstant: 2
   changeTimeConstant: 1
   moveActive: 1
-  onCollisionTurn: 180
+  onCollisionTurn: 90
   minTurnHeight: 1
 --- !u!135 &3124638244393942038
 SphereCollider:
@@ -706,3 +709,51 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.91777015
   m_Center: {x: 0, y: 0.08953476, z: 0.051628113}
+--- !u!95 &348009806
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8895909088609933959}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2febefc80ab0a4bef852667543fe2b1d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &348009805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8895909088609933959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8942ce5ee26064c4785ab60b44863c99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DeadTurkey: {fileID: 1018365096156287151, guid: f13dcee7d80528740af2888446752614,
+    type: 3}
+  health: 3
+--- !u!114 &7078186305860378039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8895909088609933959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ea48f00823414c81bb6e6bf068d6202, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forceMagnitude: 10
+  upwardMag: 10

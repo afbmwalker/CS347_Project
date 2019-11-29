@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.5748171, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -485,6 +485,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 16575586}
+  - component: {fileID: 16575587}
   m_Layer: 0
   m_Name: NightStand
   m_TagString: Untagged
@@ -511,6 +512,22 @@ Transform:
   m_Father: {fileID: 1602852519}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &16575587
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 16575585}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &18871663
 GameObject:
   m_ObjectHideFlags: 0
@@ -4893,6 +4910,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 204744907}
+  - component: {fileID: 204744908}
   m_Layer: 0
   m_Name: Shelf
   m_TagString: Untagged
@@ -4920,6 +4938,22 @@ Transform:
   m_Father: {fileID: 1602852519}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &204744908
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 204744906}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &205712266
 GameObject:
   m_ObjectHideFlags: 0
@@ -7729,46 +7763,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 343739062}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &348009800 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8895909088609933959, guid: 95ab9f9aeda994043bd87639293c0091,
-    type: 3}
-  m_PrefabInstance: {fileID: 8895909087994948721}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &348009805
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 348009800}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8942ce5ee26064c4785ab60b44863c99, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DeadTurkey: {fileID: 1018365096156287151, guid: f13dcee7d80528740af2888446752614,
-    type: 3}
-  health: 3
---- !u!95 &348009806
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 348009800}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2febefc80ab0a4bef852667543fe2b1d, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &348933858
 GameObject:
   m_ObjectHideFlags: 0
@@ -8694,6 +8688,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 392734391}
+  - component: {fileID: 392734392}
   m_Layer: 0
   m_Name: Lamp
   m_TagString: Untagged
@@ -8718,6 +8713,22 @@ Transform:
   m_Father: {fileID: 1602852519}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &392734392
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 392734390}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &395986378
 GameObject:
   m_ObjectHideFlags: 0
@@ -11997,6 +12008,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 577957768}
+  - component: {fileID: 577957769}
   m_Layer: 0
   m_Name: Chair2
   m_TagString: Untagged
@@ -12024,6 +12036,22 @@ Transform:
   m_Father: {fileID: 1602852519}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &577957769
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 577957767}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &581044887
 GameObject:
   m_ObjectHideFlags: 0
@@ -20428,6 +20456,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1003532435}
+  - component: {fileID: 1003532436}
   m_Layer: 0
   m_Name: Chair3
   m_TagString: Untagged
@@ -20455,6 +20484,22 @@ Transform:
   m_Father: {fileID: 1602852519}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &1003532436
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1003532434}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1006731799
 GameObject:
   m_ObjectHideFlags: 0
@@ -26916,6 +26961,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1260015901}
+  - component: {fileID: 1260015902}
   m_Layer: 0
   m_Name: TV
   m_TagString: Untagged
@@ -26940,6 +26986,22 @@ Transform:
   m_Father: {fileID: 1602852519}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &1260015902
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1260015900}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1260103190
 GameObject:
   m_ObjectHideFlags: 0
@@ -29860,6 +29922,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1367679894}
+  - component: {fileID: 1367679895}
   m_Layer: 0
   m_Name: Chair1
   m_TagString: Untagged
@@ -29887,6 +29950,22 @@ Transform:
   m_Father: {fileID: 1602852519}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &1367679895
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1367679893}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1368384747
 GameObject:
   m_ObjectHideFlags: 0
@@ -32137,6 +32216,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1452722646}
+  - component: {fileID: 1452722647}
   m_Layer: 0
   m_Name: Chair4
   m_TagString: Untagged
@@ -32164,6 +32244,22 @@ Transform:
   m_Father: {fileID: 1602852519}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &1452722647
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1452722645}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1454059934
 GameObject:
   m_ObjectHideFlags: 0
@@ -33027,6 +33123,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1478567433}
+  - component: {fileID: 1478567434}
   m_Layer: 0
   m_Name: Table
   m_TagString: Untagged
@@ -33053,6 +33150,22 @@ Transform:
   m_Father: {fileID: 1602852519}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &1478567434
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1478567432}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1488114988
 GameObject:
   m_ObjectHideFlags: 0
@@ -36715,6 +36828,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1696793040}
+  - component: {fileID: 1696793041}
   m_Layer: 0
   m_Name: Chest
   m_TagString: Untagged
@@ -36739,6 +36853,22 @@ Transform:
   m_Father: {fileID: 1602852519}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &1696793041
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1696793039}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1702287563
 GameObject:
   m_ObjectHideFlags: 0
@@ -38083,6 +38213,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1778729389}
+  - component: {fileID: 1778729390}
   m_Layer: 0
   m_Name: Couch
   m_TagString: Untagged
@@ -38108,6 +38239,22 @@ Transform:
   m_Father: {fileID: 1602852519}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &1778729390
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778729388}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1784611217
 GameObject:
   m_ObjectHideFlags: 0
@@ -47862,11 +48009,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Turkey
       objectReference: {fileID: 0}
-    - target: {fileID: 8895909088609933959, guid: 95ab9f9aeda994043bd87639293c0091,
-        type: 3}
-      propertyPath: m_TagString
-      value: Turkey
-      objectReference: {fileID: 0}
     - target: {fileID: 8895909088609933960, guid: 95ab9f9aeda994043bd87639293c0091,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -47922,24 +48064,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8895909088609933958, guid: 95ab9f9aeda994043bd87639293c0091,
-        type: 3}
-      propertyPath: m_Mass
-      value: 0.0000001
-      objectReference: {fileID: 0}
-    - target: {fileID: 8895909088609933963, guid: 95ab9f9aeda994043bd87639293c0091,
-        type: 3}
-      propertyPath: onCollisionTurn
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 1948437104211908987, guid: 95ab9f9aeda994043bd87639293c0091,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 8895909088373325578, guid: 95ab9f9aeda994043bd87639293c0091, type: 3}
-    - {fileID: 6657299742460970077, guid: 95ab9f9aeda994043bd87639293c0091, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95ab9f9aeda994043bd87639293c0091, type: 3}
 --- !u!1001 &9193000326729338844
 PrefabInstance:
