@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.5748171, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7750,6 +7750,25 @@ MonoBehaviour:
   DeadTurkey: {fileID: 1018365096156287151, guid: f13dcee7d80528740af2888446752614,
     type: 3}
   health: 3
+--- !u!95 &348009806
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 348009800}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2febefc80ab0a4bef852667543fe2b1d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &348933858
 GameObject:
   m_ObjectHideFlags: 0
@@ -47851,7 +47870,7 @@ PrefabInstance:
     - target: {fileID: 8895909088609933960, guid: 95ab9f9aeda994043bd87639293c0091,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -75.443
+      value: -84.38
       objectReference: {fileID: 0}
     - target: {fileID: 8895909088609933960, guid: 95ab9f9aeda994043bd87639293c0091,
         type: 3}
@@ -47861,7 +47880,7 @@ PrefabInstance:
     - target: {fileID: 8895909088609933960, guid: 95ab9f9aeda994043bd87639293c0091,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 35.027
+      value: -20
       objectReference: {fileID: 0}
     - target: {fileID: 8895909088609933960, guid: 95ab9f9aeda994043bd87639293c0091,
         type: 3}
