@@ -17550,75 +17550,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 843544402}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1001 &844118390
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 8895909088609933959, guid: 95ab9f9aeda994043bd87639293c0091,
-        type: 3}
-      propertyPath: m_Name
-      value: Turkey
-      objectReference: {fileID: 0}
-    - target: {fileID: 8895909088609933960, guid: 95ab9f9aeda994043bd87639293c0091,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 57.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8895909088609933960, guid: 95ab9f9aeda994043bd87639293c0091,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.32
-      objectReference: {fileID: 0}
-    - target: {fileID: 8895909088609933960, guid: 95ab9f9aeda994043bd87639293c0091,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 2.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8895909088609933960, guid: 95ab9f9aeda994043bd87639293c0091,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8895909088609933960, guid: 95ab9f9aeda994043bd87639293c0091,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8895909088609933960, guid: 95ab9f9aeda994043bd87639293c0091,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8895909088609933960, guid: 95ab9f9aeda994043bd87639293c0091,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8895909088609933960, guid: 95ab9f9aeda994043bd87639293c0091,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 17
-      objectReference: {fileID: 0}
-    - target: {fileID: 8895909088609933960, guid: 95ab9f9aeda994043bd87639293c0091,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8895909088609933960, guid: 95ab9f9aeda994043bd87639293c0091,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8895909088609933960, guid: 95ab9f9aeda994043bd87639293c0091,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 95ab9f9aeda994043bd87639293c0091, type: 3}
 --- !u!1 &845488260
 GameObject:
   m_ObjectHideFlags: 0
@@ -24622,6 +24553,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   my_money: {fileID: 0}
   amount: 
+  turkey: {fileID: 0}
 --- !u!114 &1138283874
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35817,7 +35749,6 @@ MonoBehaviour:
   moveActive: 1
   onCollisionTurn: 90
   minTurnHeight: 1
-  animator: {fileID: 0}
 --- !u!54 &1618540393
 Rigidbody:
   m_ObjectHideFlags: 0

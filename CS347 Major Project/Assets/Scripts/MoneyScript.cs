@@ -7,6 +7,7 @@ public class MoneyScript : MonoBehaviour
 {
 	public Text my_money;
 	public string amount;
+	public GameObject turkey;
 
     // Start is called before the first frame update
     void Start()
@@ -27,7 +28,11 @@ public class MoneyScript : MonoBehaviour
 
         if(collidedobject.gameObject.tag == "Store")
 		{
-			GameObject dollars;
+			GameObject turkey_anim;
+			turkey_anim = GameObject.Find("Turkey-Animated");
+			Destroy(turkey_anim);
+
+            GameObject dollars;
 			dollars = GameObject.Find("MyMoney");
 			my_money = dollars.GetComponent<Text>();
 			my_money.text = "$25";
@@ -53,4 +58,16 @@ public class MoneyScript : MonoBehaviour
 			amount = my_money.text;
 		}
 	}
+
+    //private void OnCollisionExit(Collision collision)
+	//{
+	//	GameObject collidedobject;
+	//	collidedobject = collision.gameObject;
+	//	if (collidedobject.gameObject.tag == "Store")
+	//	{
+	//		GameObject turkey_ran;
+	//		turkey_ran = GameObject.Find("Turkey Spawner");
+	//		turkey_ran.Instantiate<GameObject>(turkey);
+	//	}
+	//}
 }
