@@ -13,6 +13,7 @@ public class TurkeyMove : MonoBehaviour
     public bool moveActive;
     public float onCollisionTurn;
     public float minTurnHeight;
+	
    
     private Vector3 child1Transform;
     private Vector3 child2Transform;
@@ -22,6 +23,7 @@ public class TurkeyMove : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         Invoke("changeCurve", changeTimeConstant);
         reverse.y = onCollisionTurn;
     }
@@ -29,9 +31,9 @@ public class TurkeyMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (moveActive)
         {
-
             this.transform.Rotate(rotateVect, Space.World);
 
             child1Transform = this.transform.GetChild((int)child1).position;
