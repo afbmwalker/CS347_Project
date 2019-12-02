@@ -695,7 +695,6 @@ MonoBehaviour:
   moveActive: 1
   onCollisionTurn: 90
   minTurnHeight: 1
-  animator: {fileID: 0}
 --- !u!135 &3124638244393942038
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -736,5 +735,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ea48f00823414c81bb6e6bf068d6202, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forceMagnitude: 10
-  upwardMag: 10
+  xzMagnitude: 10
+  yMagnitude: 10
