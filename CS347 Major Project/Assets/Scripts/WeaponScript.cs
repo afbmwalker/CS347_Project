@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class WeaponScript : MonoBehaviour
 {
-
 	public Text my_money;
 	public string amount;
 	private bool weaponSelected = false;
@@ -22,12 +21,11 @@ public class WeaponScript : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    {   // Check to see if in the store, if weapon is equipped, if a weapon is selected
         if(inStore == true && weaponSelected == false && Input.GetKey("1"))
-        {
+        {   // Equip the Axe by setting it active
             axe.SetActive(true);
             weaponSelected = true;
-
 			GameObject dollars;
 			dollars = GameObject.Find("MyMoney");
 			my_money = dollars.GetComponent<Text>();
@@ -35,10 +33,9 @@ public class WeaponScript : MonoBehaviour
 			amount = my_money.text;
 		}
         if (inStore == true && weaponSelected == false && Input.GetKey("2"))
-        {
+        {   // Equip the Gun by setting it active
             gun.SetActive(true);
             weaponSelected = true;
-
 			GameObject dollars;
 			dollars = GameObject.Find("MyMoney");
 			my_money = dollars.GetComponent<Text>();
@@ -46,10 +43,9 @@ public class WeaponScript : MonoBehaviour
 			amount = my_money.text;
 		}
         if (inStore == true && weaponSelected == false && Input.GetKey("3"))
-        {
+        {   // Equip the Sling by setting it active
             sling.SetActive(true);
             weaponSelected = true;
-
 			GameObject dollars;
 			dollars = GameObject.Find("MyMoney");
 			my_money = dollars.GetComponent<Text>();
@@ -62,7 +58,6 @@ public class WeaponScript : MonoBehaviour
             sling.SetActive(false);
             axe.SetActive(false);
             weaponSelected = false;
-
 			GameObject dollars;
 			dollars = GameObject.Find("MyMoney");
 			my_money = dollars.GetComponent<Text>();
