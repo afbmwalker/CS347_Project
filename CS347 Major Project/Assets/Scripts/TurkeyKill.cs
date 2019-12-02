@@ -18,6 +18,7 @@ public class TurkeyKill : MonoBehaviour
             if (health==0)
             {
                 Instantiate<GameObject>(DeadTurkey);
+                DeadTurkey = GameObject.Find("DeadTurkey(Clone)");
                 DeadTurkey.transform.position = this.transform.position;
                 print(DeadTurkey.transform.position);
                 print(this.transform.position);
