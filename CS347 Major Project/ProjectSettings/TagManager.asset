@@ -10,6 +10,7 @@ TagManager:
   - BulletEnd
   - Store
   - Sidewalk
+  - TurkeyInHand
   layers:
   - Default
   - TransparentFX
