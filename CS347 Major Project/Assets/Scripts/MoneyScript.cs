@@ -7,18 +7,39 @@ public class MoneyScript : MonoBehaviour
 {
 	public Text my_money;
 	public string amount;
-	public GameObject turkey;
+	public GameObject turkey_prefab;
+	public bool controller;
+	public int count;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+		controller = false;
+        count = 1;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+		if (controller == true)
+			if (count == 1)
+			{
+				{
+					GameObject turkey_anim;
+					turkey_anim = GameObject.Find("Turkey-Animated");
+					Destroy(turkey_anim);
+
+					Invoke("SpawnTurkey", 1.0f);
+
+					GameObject dollars;
+					dollars = GameObject.Find("MyMoney");
+					my_money = dollars.GetComponent<Text>();
+					my_money.text = "$25";
+					amount = my_money.text;
+
+					count--;
+				}
+			}
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -28,15 +49,7 @@ public class MoneyScript : MonoBehaviour
 
         if(collidedobject.gameObject.tag == "Store")
 		{
-			GameObject turkey_anim;
-			turkey_anim = GameObject.Find("Turkey-Animated");
-			Destroy(turkey_anim);
-
-            GameObject dollars;
-			dollars = GameObject.Find("MyMoney");
-			my_money = dollars.GetComponent<Text>();
-			my_money.text = "$25";
-			amount = my_money.text;
+			controller = true;
 		}
 
         if(collidedobject.gameObject.tag == "Sidewalk")
@@ -47,27 +60,13 @@ public class MoneyScript : MonoBehaviour
 			my_money.text = "";
 			amount = my_money.text;
 		}
-
-        //Replace this code after picking up weapons has been finalized.
-		if (collidedobject.gameObject.tag == "Weapon")
-		{
-			GameObject dollars;
-			dollars = GameObject.Find("MyMoney");
-			my_money = dollars.GetComponent<Text>();
-			my_money.text = "$5";
-			amount = my_money.text;
-		}
 	}
 
-    //private void OnCollisionExit(Collision collision)
-	//{
-	//	GameObject collidedobject;
-	//	collidedobject = collision.gameObject;
-	//	if (collidedobject.gameObject.tag == "Store")
-	//	{
-	//		GameObject turkey_ran;
-	//		turkey_ran = GameObject.Find("Turkey Spawner");
-	//		turkey_ran.Instantiate<GameObject>(turkey);
-	//	}
-	//}
+	public void SpawnTurkey()
+	{
+		GameObject turkey;
+		turkey = Instantiate<GameObject>(turkey_prefab);
+		turkey.transform.position = this.transform.position + new Vector3(250, 2, 50);
+	}
+
 }
