@@ -6531,36 +6531,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 271723429}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &274112757
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 274112758}
-  m_Layer: 0
-  m_Name: Turkey Spawner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &274112758
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 274112757}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 80.22, y: 1.21, z: 6.374942}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 16
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &280548638
 GameObject:
   m_ObjectHideFlags: 0
@@ -24475,8 +24445,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1138283868}
-  m_LocalRotation: {x: -0, y: -0.012256414, z: -0, w: 0.9999249}
-  m_LocalPosition: {x: -68.571686, y: 0.029999971, z: -11.804292}
+  m_LocalRotation: {x: 0, y: 0.25881916, z: -0, w: -0.9659258}
+  m_LocalPosition: {x: -75.48, y: 0.029999971, z: 24.2}
   m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_Children:
   - {fileID: 534669905}
@@ -24488,7 +24458,7 @@ Transform:
   - {fileID: 390942365}
   m_Father: {fileID: 0}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: -1.4050001, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 330, z: 0}
 --- !u!54 &1138283870
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -24553,7 +24523,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   my_money: {fileID: 0}
   amount: 
-  turkey: {fileID: 0}
+  turkey_prefab: {fileID: 8895909088609933959, guid: 95ab9f9aeda994043bd87639293c0091,
+    type: 3}
+  controller: 0
+  count: 0
 --- !u!114 &1138283874
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24578,6 +24551,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1376a9712e9d1e243bc82d233dd6c67d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  my_money: {fileID: 0}
+  amount: 
   axe: {fileID: 1648642181}
   gun: {fileID: 1377583039}
   sling: {fileID: 773148246}
@@ -48875,12 +48850,12 @@ PrefabInstance:
     - target: {fileID: 2308563917586728148, guid: a15184c8ceff23042839fee0a0dcb8f7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.565
+      value: 2.662
       objectReference: {fileID: 0}
     - target: {fileID: 2308563917586728148, guid: a15184c8ceff23042839fee0a0dcb8f7,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -57.273
+      value: -64.769
       objectReference: {fileID: 0}
     - target: {fileID: 2308563917586728148, guid: a15184c8ceff23042839fee0a0dcb8f7,
         type: 3}
