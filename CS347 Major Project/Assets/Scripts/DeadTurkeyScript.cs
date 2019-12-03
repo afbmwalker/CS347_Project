@@ -9,7 +9,7 @@ public class DeadTurkeyScript : MonoBehaviour
     bool inHand = false;
     // Start is called before the first frame update
     void Start()
-    {
+    {   // establish a parent object to pickup the turkey
         parentObject = GameObject.FindWithTag("TurkeyInHand");
     }
 
@@ -21,13 +21,14 @@ public class DeadTurkeyScript : MonoBehaviour
 
     // On Collision, let's pickup turkey
     private void OnCollisionEnter(Collision collision)
-    {
+    {   // If player walks over the turkey, pick it up
         if(inHand == false && collision.gameObject.tag == "Player")
-        {
-            print("Dead Turkey!");
-            inHand = true;
-            //transform.position = deadTurkeyLocation.transform.position;
-            this.transform.SetParent(parentObject.transform);
+        {   // Dynamically move dead turkey with player movement
+            inHand = true; // you have picked up turkey, prevents weird collider bugs
+            this.transform.SetParent(parentObject.transform); // move turkey to player heirarchy
+
+            print(transform.position);
+            print(parentObject.transform.position);
         }
     }
 

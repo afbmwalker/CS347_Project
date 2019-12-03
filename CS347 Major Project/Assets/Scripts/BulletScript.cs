@@ -17,7 +17,7 @@ public class BulletScript : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    {   // move bullet in a forward vector
         transform.position = Vector3.MoveTowards(transform.position, bulletPath, bulletSpeed * Time.deltaTime);
     }
 

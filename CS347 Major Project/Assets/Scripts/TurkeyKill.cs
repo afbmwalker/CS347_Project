@@ -11,18 +11,16 @@ public class TurkeyKill : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         GameObject collidedObj = collision.gameObject;
+        // If a weapon hits the Turkey
         if (collidedObj.tag == "Weapon")
-        {   // Test
-            print("Turkey Hit!");
+        {   // decrement health
             health--;
             if (health==0)
-            {
-                Instantiate<GameObject>(DeadTurkey);
-                DeadTurkey = GameObject.Find("DeadTurkey(Clone)");
-                DeadTurkey.transform.position = this.transform.position;
-                print(DeadTurkey.transform.position);
-                print(this.transform.position);
-                Destroy(this.gameObject);
+            {   // If health is 0, destroy turkey and spawn a dead turkey object at the location
+                Instantiate<GameObject>(DeadTurkey); // spawn dead turkey
+                DeadTurkey = GameObject.Find("DeadTurkey(Clone)"); // find location
+                DeadTurkey.transform.position = this.transform.position; // move location
+                Destroy(this.gameObject); // destroy other turkey
             }
         }
     }

@@ -13,7 +13,7 @@ public class MoneyScript : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {
+    {   
 		controller = false;
         count = 1;
     }
