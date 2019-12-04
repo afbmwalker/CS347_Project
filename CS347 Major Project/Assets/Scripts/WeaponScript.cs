@@ -35,6 +35,8 @@ public class WeaponScript : MonoBehaviour
         {   // Equip the Axe by setting it active
             axe.SetActive(true);
             weaponSelected = true;
+
+            //Displays '$5' to the screen, implicating the player spent $20.
 			GameObject dollars;
 			dollars = GameObject.Find("MyMoney");
 			my_money = dollars.GetComponent<Text>();
@@ -45,6 +47,8 @@ public class WeaponScript : MonoBehaviour
         {   // Equip the Gun by setting it active
             gun.SetActive(true);
             weaponSelected = true;
+
+			//Displays '$5' to the screen, implicating the player spent $20.
 			GameObject dollars;
 			dollars = GameObject.Find("MyMoney");
 			my_money = dollars.GetComponent<Text>();
@@ -55,6 +59,8 @@ public class WeaponScript : MonoBehaviour
         {   // Equip the Sling by setting it active
             sling.SetActive(true);
             weaponSelected = true;
+
+			//Displays '$5' to the screen, implicating the player spent $20.
 			GameObject dollars;
 			dollars = GameObject.Find("MyMoney");
 			my_money = dollars.GetComponent<Text>();
@@ -67,6 +73,8 @@ public class WeaponScript : MonoBehaviour
             sling.SetActive(false);
             axe.SetActive(false);
             weaponSelected = false;
+
+			//Displays '$25' to the screen again, implicating the player got their money back.
 			GameObject dollars;
 			dollars = GameObject.Find("MyMoney");
 			my_money = dollars.GetComponent<Text>();
