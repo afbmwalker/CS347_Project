@@ -22,26 +22,26 @@ public class Help : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.H))
+        if (Input.GetKeyDown(KeyCode.H))//if the h key is pressed
         {
             GameObject GlobalPrompt;                                     //This block gets the reference
-            Text TextObj;
-            GlobalPrompt = GameObject.Find("GlobalPrompt");            //to the text storing the score,
-            TextObj = GlobalPrompt.GetComponent<Text>();                //and sets scoreText to this
-            TextObj.text = "Goal: Get Revenge On The Turkey\n" +
-                "Controls:\n" +
-                "Move: Arrow Keys/WASD\n" +
-                "Look: Mouse\n" +
-                "Buy Weapon: 1, 2, 3\n" +
-                "Use Weapon: Space";
+            Text TextObj;                                                //to the text object to hold
+            GlobalPrompt = GameObject.Find("GlobalPrompt");              //the help text and inserts
+            TextObj = GlobalPrompt.GetComponent<Text>();                 //the text for display
+            TextObj.text = "Goal: Get Revenge On The Turkey\n" +         //
+                "Controls:\n" +                                          //
+                "Move: Arrow Keys/WASD\n" +                              //
+                "Look: Mouse\n" +                                        //
+                "Buy Weapon: 1, 2, 3\n" +                                //
+                "Use Weapon: Space";                                     //
         }
-        else if (Input.GetKeyUp(KeyCode.H))
+        else if(Input.GetKeyUp(KeyCode.H))//if the h key is released
         {
             GameObject GlobalPrompt;                                     //This block gets the reference
-            Text TextObj;
-            GlobalPrompt = GameObject.Find("GlobalPrompt");            //to the text storing the score,
-            TextObj = GlobalPrompt.GetComponent<Text>();                //and sets scoreText to this
-            TextObj.text = "";
+            Text TextObj;                                                //to the text object holding 
+            GlobalPrompt = GameObject.Find("GlobalPrompt");              //the help text and removes
+            TextObj = GlobalPrompt.GetComponent<Text>();                 //the text from the screen
+            TextObj.text = "";                                           //
         }
     }
 }
