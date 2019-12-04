@@ -1,4 +1,13 @@
-﻿using System.Collections;
+﻿/* CS 347 Video Game Design, Fall 2019
+ * Dr. Tim Newman
+ * Major Project: Slay the Snood
+ * Team Members:
+ *      Brendan Walker
+ *      David Caddell
+ *      John Paul Martin
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

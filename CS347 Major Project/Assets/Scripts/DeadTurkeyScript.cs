@@ -1,4 +1,13 @@
-﻿using System.Collections;
+﻿/* CS 347 Video Game Design, Fall 2019
+ * Dr. Tim Newman
+ * Major Project: Slay the Snood
+ * Team Members:
+ *      Brendan Walker
+ *      David Caddell
+ *      John Paul Martin
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -26,9 +35,6 @@ public class DeadTurkeyScript : MonoBehaviour
         {   // Dynamically move dead turkey with player movement
             inHand = true; // you have picked up turkey, prevents weird collider bugs
             this.transform.SetParent(parentObject.transform); // move turkey to player heirarchy
-
-            print(transform.position);
-            print(parentObject.transform.position);
         }
     }
 
