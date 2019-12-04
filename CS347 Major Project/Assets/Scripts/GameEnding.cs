@@ -20,12 +20,12 @@ public class GameEnding : MonoBehaviour
         triggeringObj = other.gameObject;
         if (triggeringObj.tag == "DeadTurkey")
         {
-            GameObject GlobalPrompt;                    //This block gets the reference
-            Text TextObj;
-            GlobalPrompt = GameObject.Find("GlobalPrompt");            //to the text storing the score,
-            TextObj = GlobalPrompt.GetComponent<Text>();      //and sets scoreText to this
+            GameObject GlobalPrompt;                            //This block gets the reference
+            Text TextObj;                                       //to the object to hold the
+            GlobalPrompt = GameObject.Find("GlobalPrompt");     //game won text and inserts 
+            TextObj = GlobalPrompt.GetComponent<Text>();        //the game won text 
             TextObj.text = "WINNER WINNER TURKEY DINNER!";
-            Invoke("QuitApplication", 4.0f);
+            Invoke("QuitApplication", 4.0f);                    //close application in 4 seconds
         }
     }
     private void QuitApplication()

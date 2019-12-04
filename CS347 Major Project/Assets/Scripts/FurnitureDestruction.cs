@@ -14,18 +14,18 @@ using UnityEngine;
 public class FurnitureDestruction : MonoBehaviour
 {
 
-    public float xzMagnitude; //modifier for force applied to object in the x and z directions
+    public float xzMagnitude;   //modifier for force applied to object in the x and z directions
     public float yMagnitude;    //force applied to an object in the y direction
    
 
     private void OnCollisionEnter(Collision collision)
 	{
     
-        GameObject collidedObj;
-        Rigidbody collidedRb;
-        Vector3 impulseVect;
+        GameObject collidedObj; //the collided object
+        Rigidbody collidedRb; //the rigidbody of the collided object
+        Vector3 impulseVect; //the vector designating the impulse to be applied
         
-        collidedObj = collision.gameObject;
+        collidedObj = collision.gameObject; //initialize collided object
         collidedRb = collidedObj.GetComponent<Rigidbody>(); //rigid body is what the force will act upon
 
         if (collidedRb != null) //prevents script from attempting to access a rigidbody that does not exist
@@ -34,8 +34,8 @@ public class FurnitureDestruction : MonoBehaviour
 
             impulseVect.Normalize();
 
-            impulseVect *= xzMagnitude;
-            impulseVect.y = yMagnitude; 
+            impulseVect *= xzMagnitude; //apply magnitude modifier to the x and z components
+            impulseVect.y = yMagnitude; //add new magnitude to y component
 
             collidedRb.AddForce(impulseVect, ForceMode.Impulse);
         }

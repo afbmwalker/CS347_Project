@@ -13,28 +13,28 @@ using UnityEngine;
 
 public class TurkeyMove : MonoBehaviour
 {
-    public uint child1;
-    public uint child2;
-    public float speedConstant;
-    public float curveConstant;
-    public float changeTimeConstant;
-    private Vector3 rotateVect = Vector3.zero;
-    public bool moveActive;
-    public float onCollisionTurn;
-    public float minTurnHeight;
+    public uint child1;                         //an unsigned int to specify which child in the turkey hirearchy is the head
+    public uint child2;                         //an unsigned int to specify which child in the turkey hirearchy is the tail
+    public float speedConstant;                 //a scalar proportional to the turkey's forward velocity
+    public float curveConstant;                 //a scalar proportional to the rate at which the turkey turns
+    public float changeTimeConstant;            //the time between changes of direction
+    private Vector3 rotateVect = Vector3.zero;  //vector3 to hold the turn rotation of the turkey
+    public bool moveActive;                     //whether the turkey moves on its own
+    public float onCollisionTurn;               //how much the turkey will turn if it collides with an object
+    public float minTurnHeight;                 //prevents the turkey from constantly turning on colision with the ground
 	
    
-    private Vector3 child1Transform;
-    private Vector3 child2Transform;
-    private Vector3 forwardVect;
-    private Vector3 reverse = Vector3.zero;
+    private Vector3 child1Transform;            //transform of the turkey head
+    private Vector3 child2Transform;            //transform of the turkey tail
+    private Vector3 forwardVect;                //vector of forward velocity
+    private Vector3 onCollisionVect = Vector3.zero;     //the turn vector upon colliding with an object
     
     // Start is called before the first frame update
     void Start()
     {
 
-        Invoke("changeCurve", changeTimeConstant);
-        reverse.y = onCollisionTurn;
+        Invoke("changeCurve", changeTimeConstant);//start a loop to change direction of the turkey randomly at constant time intervals
+        onCollisionVect.y = onCollisionTurn;              //initialize collision turn vector
     }
 
     // Update is called once per frame
@@ -45,20 +45,20 @@ public class TurkeyMove : MonoBehaviour
         {
             this.transform.Rotate(rotateVect, Space.World);
 
-            child1Transform = this.transform.GetChild((int)child1).position;
-            child2Transform = this.transform.GetChild((int)child2).position;
+            child1Transform = this.transform.GetChild((int)child1).position;//get head transform
+            child2Transform = this.transform.GetChild((int)child2).position;//get tail transform
 
-            forwardVect = child1Transform - child2Transform; //create a vector between 2 points on the turkey
-            forwardVect.y = 0.0f;                           //lock turkey y
-            forwardVect.Normalize();
-            this.transform.position = this.transform.position + speedConstant * forwardVect; //adds a movement vector to the transform
+            forwardVect = child1Transform - child2Transform; //create a forward vector by taking the difference of the turkey head and tail transforms
+            forwardVect.y = 0.0f;                            //lock turkey y
+            forwardVect.Normalize();                         
+            this.transform.position = this.transform.position + speedConstant * forwardVect; //adds a forward movement vector to the turkey transform
         }
 
     }
     void changeCurve()//every changeTimeConstant turky changes rate of curve
     {
-        rotateVect.y = curveConstant * (Random.value - 0.5f);
-        Invoke("changeCurve", changeTimeConstant);
+        rotateVect.y = curveConstant * (Random.value - 0.5f); //change the direction of the turkey
+        Invoke("changeCurve", changeTimeConstant); //continue looping
     }
     private void OnCollisionEnter(Collision collision)
     {
@@ -67,11 +67,7 @@ public class TurkeyMove : MonoBehaviour
         this.transform.Rotate(toUpright);
         if (collision.GetContact(0).point.y > minTurnHeight) //prevents the turkey from turning when it collided with the ground
         {
-            //this.transform.eulerAngles
-            //this.transform.Rotate(-1.0f * this.transform.eulerAngles);
-            this.transform.Rotate(reverse, Space.World);
-            // forwardVect = -1.0f * forwardVect;
-            //rotateVect.y = 1.0f+rotateVect.y;
+            this.transform.Rotate(onCollisionVect, Space.World); //turns the turkey
         }
     }
   

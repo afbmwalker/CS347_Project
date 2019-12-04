@@ -24832,8 +24832,11 @@ MonoBehaviour:
   amount: 
   turkey_prefab: {fileID: 8895909088609933959, guid: 95ab9f9aeda994043bd87639293c0091,
     type: 3}
+  feather_prefab: {fileID: 7360604759627728880, guid: b59bb5c805559479ca2654fff2940b57,
+    type: 3}
   controller: 0
   count: 0
+  feather_x: 0
 --- !u!114 &1138283874
 MonoBehaviour:
   m_ObjectHideFlags: 0
