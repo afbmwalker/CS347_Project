@@ -42,22 +42,22 @@ public class PlayerMove : MonoBehaviour
     {   // Move Forward
         if (Input.GetKey("w") || Input.GetKey("up"))
         {
-            transform.position = transform.position + this.transform.forward * speed * Time.deltaTime;
+            transform.position = transform.position + Camera.main.transform.forward * speed * Time.deltaTime;
         }
         // Move Backward
         if (Input.GetKey("s") || Input.GetKey("down"))
         {
-            transform.position = transform.position + this.transform.forward * -1 * speed * Time.deltaTime;
+            transform.position = transform.position + Camera.main.transform.forward * -1 * speed * Time.deltaTime;
         }
         // Move Left
         if (Input.GetKey("a") || Input.GetKey("left"))
         {
-            transform.position = transform.position + this.transform.right * -1 * speed * Time.deltaTime;
+            transform.position = transform.position + Camera.main.transform.right * -1 * speed * Time.deltaTime;
         }
         // Move Right
         if (Input.GetKey("d") || Input.GetKey("right"))
         {
-            transform.position = transform.position + this.transform.right * speed * Time.deltaTime;
+            transform.position = transform.position + Camera.main.transform.right * speed * Time.deltaTime;
         }
         // update camera rotation according to mouse movement
         yaw += horizontalSpeed * Input.GetAxis("Mouse X"); // rotation about x-axis
